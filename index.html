@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Radicación de Demanda Arbitral - Usuario Experto</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 py-10">
+  <div class="max-w-5xl mx-auto bg-white p-8 rounded-2xl shadow-xl">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800">Formulario: Radicación de Demanda Arbitral</h2>
+    <form class="space-y-8">
+
+      <!-- 1. Información General del Caso -->
+      <section>
+        <h3 class="text-xl font-semibold mb-4">1. Información General del Caso</h3>
+        <label class="block mb-2 font-medium">Tipo de proceso:</label>
+        <div class="flex flex-wrap gap-4 mb-4">
+          <label><input type="checkbox" name="tipoProceso" value="Nacional" class="mr-1"> Arbitraje Nacional</label>
+          <label><input type="checkbox" name="tipoProceso" value="Internacional" class="mr-1"> Arbitraje Internacional</label>
+
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input type="text" placeholder="Parte convocante" class="input" required>
+          <input type="text" placeholder="Nombre / Razón Social" class="input" required>
+          <input type="text" placeholder="Tipo de identificación" class="input">
+          <input type="text" placeholder="Número de identificación" class="input">
+          <input type="text" placeholder="Representante legal (si aplica)" class="input">
+                <select id="tipo-representacion" name="tipo-representacion" class="input">
+                        <option value="">Tipo de representacion</option>
+                        <option value="opcion1">Persona Natural</option>
+                        <option value="opcion2">Persona Juridica</option>
+                </select>
+          <input type="email" placeholder="Correo electrónico de notificacion judicial" class="input">
+          <input type="tel" placeholder="Teléfono de contacto" class="input">
+        </div>
+    <!-- Apoderado -->
+        <h4 class="mt-6 font-semibold">Apoderado:</h4>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+          <input type="text" placeholder="Identificacion" class="input">
+          <input type="text" placeholder="Tarjeta Profesional" class="input">
+          <input type="email" placeholder="Correo Electronico" class="input">
+          <input type="text" placeholder="Telefono" class="input">
+        </div>
+
+        <h4 class="mt-6 font-semibold">Parte(s) convocada(s):</h4>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+          <input type="text" placeholder="Nombre / Razón Social" class="input">
+          <input type="text" placeholder="Tipo de identificación" class="input">
+          <input type="text" placeholder="Número de identificación" class="input">
+          <input type="text" placeholder="Representante legal (si aplica)" class="input">
+          <input type="email" placeholder="Correo electrónico para notificaciones judiciales" class="input">
+          <input type="text" placeholder="Dirección fisica" class="input">
+        </div>
+      </section>
+
+      <!-- 2. Cuantía y Naturaleza -->
+      <section>
+        <h3 class="text-xl font-semibold mb-4">2. Cuantía y Naturaleza del Proceso</h3>
+        <input type="text" placeholder="Pretensión" class="input mb-2">
+        <input type="text" placeholder="Pretensiones" class="input mb-2">
+        <input type="text" placeholder="Monto estimado del litigio" class="input">
+
+        <label class="block mb-2 font-medium">Tipo de controversia:</label>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <label><input type="checkbox" name="tipoControversia" value="Comercial" class="mr-1"> Comercial</label>
+          <label><input type="checkbox" name="tipoControversia" value="Civil" class="mr-1"> Civil</label>
+          <label><input type="checkbox" name="tipoControversia" value="Societaria" class="mr-1"> Societaria</label>
+          <label><input type="checkbox" name="tipoControversia" value="PI" class="mr-1"> Propiedad Intelectual</label>
+          <label><input type="checkbox" name="tipoControversia" value="Infraestructura" class="mr-1"> Infraestructura / Construcción</label>
+          <label><input type="text" placeholder="Otro..." class="input mt-2"></label>
+        </div>
+      </section>
+
+      <!-- 3. Pacto Arbitral -->
+      <section>
+        <h3 class="text-xl font-semibold mb-4">3. Pacto Arbitral</h3>
+        <label class="block mb-2">¿Existe cláusula compromisoria en el contrato?</label>
+        <label><input type="radio" name="clausula" value="Sí" class="mr-1"> Sí</label>
+        <label class="ml-4"><input type="radio" name="clausula" value="No" class="mr-1"> No</label>
+
+        <textarea placeholder="Texto del pacto arbitral" class="input h-32 mt-4"></textarea>
+        <label class="block mt-4 mb-2">Adjunte demandas y anexos</label>
+        <input type="file" accept=".pdf" class="input">
+      </section>
+
+      <!-- 4. Tribunal Arbitral -->
+      <section>
+        <h3 class="text-xl font-semibold mb-4">4. Tribunal Arbitral</h3>
+        <label class="block mb-2">Número de árbitros:</label>
+        <label><input type="radio" name="arbitros" value="1" class="mr-1"> Uno</label> 
+        <label class="ml-4"><input type="radio" name="arbitros" value="3" class="mr-1"> Tres</label> <br>
+
+        <label><input type="radio" name="sugiere" value="Sí" class="mr-1"> Sí</label>
+        <input type="text" placeholder="Nombre, correo y justificación" class="input mt-2">
+        <label class="ml-4"><input type="radio" name="sugiere" value="No" class="mr-1"> No</label>
+
+        <input type="text" placeholder="Centro o lista sugerida para la designación" class="input mt-4">
+      </section>
+
+      <!-- 5. Demanda y Anexos -->
+      <section>
+        <h3 class="text-xl font-semibold mb-4">5. Demanda y Anexos</h3>
+        <p class="text-sm text-gray-600 mb-2">📎 Todos los documentos deben estar firmados electrónicamente o escaneados de forma legible.</p>
+        <input type="file" name="demanda" accept=".pdf" class="input mb-2">
+        <input type="file" name="poder" accept=".pdf" class="input mb-2">
+        <input type="file" name="contrato" accept=".pdf" class="input mb-2">
+        <input type="file" name="pruebas" accept=".pdf" class="input mb-2">
+        <input type="file" name="comprobante" accept=".pdf" class="input mb-2">
+        <input type="file" name="otros" class="input">
+      </section>
+
+      <!-- 6. Observaciones -->
+      <section>
+        <h3 class="text-xl font-semibold mb-4">6. Observaciones y Solicitudes</h3>
+        <textarea placeholder="Observaciones adicionales" class="input h-24"></textarea>
+      </section>
+
+      <!-- 7. Confirmación -->
+      <section>
+        <h3 class="text-xl font-semibold mb-4">7. Confirmación y Declaraciones</h3>
+        <label class="block mb-2"><input type="checkbox" required class="mr-2"> Declaro que la información suministrada es veraz y completa.</label>
+        <label class="block mb-2"><input type="checkbox" required class="mr-2"> Al marcar la siguiente casilla, autoriza expresamente el tratamiento de sus datos personales, por parte de la Cámara de Comercio de <br> Barranquilla, conforme a la Política de tratamiento de datos personales y el Aviso de Privacidad.</label>
+    
+
+        <label class="block mt-4 font-medium">Firma electrónica del Convocante/Apoderado:</label>
+        <input type="text" placeholder="Nombre completo para firma electrónica" class="input mt-2">
+      </section>
+
+      <!-- Botones -->
+      <div class="flex flex-wrap gap-4 mt-8">
+        <button type="button" class="bg-yellow-500 text-white px-4 py-2 rounded-xl hover:bg-yellow-600">🧾 Guardar Borrador</button>
+        <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded-xl hover:bg-green-700">📤 Enviar Demanda</button>
+        <button type="reset" class="bg-gray-300 text-black px-4 py-2 rounded-xl hover:bg-gray-400">🔄 Limpiar Campos</button>
+      </div>
+    </form>
+  </div>
+
+  <style>
+    .input {
+      @apply w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400;
+    }
+  </style>
+</body>
+</html>

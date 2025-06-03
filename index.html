@@ -57,8 +57,8 @@
 
       <!-- 2. Cuantía y Naturaleza -->
       <section>
-        <h3 class="text-xl font-semibold mb-4">2. Cuantía y Naturaleza del Proceso</h3>
-        <input type="text" placeholder="Pretensión" class="input mb-2">
+        <h3 class="text-xl font-semibold mb-4">2. Cuantía total de la demanda</h3>
+        <input type="text" placeholder="Pretensiones" class="input mb-2">
         <input type="text" placeholder="Pretensiones" class="input mb-2">
         <input type="text" placeholder="Monto estimado del litigio" class="input">
 
@@ -76,12 +76,12 @@
       <!-- 3. Pacto Arbitral -->
       <section>
         <h3 class="text-xl font-semibold mb-4">3. Pacto Arbitral</h3>
-        <label class="block mb-2">¿Existe cláusula compromisoria en el contrato?</label>
+        <label class="block mb-2">Agregue el texto de la clausula compromisoria o del compromiso</label>
         <label><input type="radio" name="clausula" value="Sí" class="mr-1"> Sí</label>
         <label class="ml-4"><input type="radio" name="clausula" value="No" class="mr-1"> No</label>
 
         <textarea placeholder="Texto del pacto arbitral" class="input h-32 mt-4"></textarea>
-        <label class="block mt-4 mb-2">Adjunte demandas y anexos</label>
+        <label class="block mt-4 mb-2">Adjunte el documento que contiene el pacto arbitral</label>
         <input type="file" accept=".pdf" class="input">
       </section>
 
@@ -92,9 +92,9 @@
         <label><input type="radio" name="arbitros" value="1" class="mr-1"> Uno</label> 
         <label class="ml-4"><input type="radio" name="arbitros" value="3" class="mr-1"> Tres</label> <br>
 
-        <label><input type="radio" name="sugiere" value="Sí" class="mr-1"> Sí</label>
+        <!-- <label><input type="radio" name="sugiere" value="Sí" class="mr-1"> Sí</label>
         <input type="text" placeholder="Nombre, correo y justificación" class="input mt-2">
-        <label class="ml-4"><input type="radio" name="sugiere" value="No" class="mr-1"> No</label>
+        <label class="ml-4"><input type="radio" name="sugiere" value="No" class="mr-1"> No</label> -->
 
         <input type="text" placeholder="Centro o lista sugerida para la designación" class="input mt-4">
       </section>
@@ -102,7 +102,6 @@
       <!-- 5. Demanda y Anexos -->
       <section>
         <h3 class="text-xl font-semibold mb-4">5. Demanda y Anexos</h3>
-        <p class="text-sm text-gray-600 mb-2">📎 Todos los documentos deben estar firmados electrónicamente o escaneados de forma legible.</p>
         <input type="file" name="demanda" accept=".pdf" class="input mb-2">
         <input type="file" name="poder" accept=".pdf" class="input mb-2">
         <input type="file" name="contrato" accept=".pdf" class="input mb-2">

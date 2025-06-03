@@ -37,18 +37,20 @@
         </div>
     <!-- Apoderado -->
         <h4 class="mt-6 font-semibold">Apoderado:</h4>
-        <select id="tipo-representacion" name="tipo-representacion" class="input">
-                        <option value="">Tipo de representacion</option>
-                        <option value="opcion1">Persona Natural</option>
-                        <option value="opcion2">Persona Juridica</option>
-                </select>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+          <label>Tipo de persona:</label><br>
+            <select id="tipoPersona" onchange="mostrarCampos()">
+                <option value="">--Seleccione--</option>
+                <option value="natural">Persona Natural</option>
+                <option value="juridica">Persona Jurídica</option>
+            </select>
          <div id="camposJuridica" class="oculto">
     <div class="campo">
-      <label for="razon">Nombre/Razón Social:</label><br>
+      <label for="razon">Razón Social:</label><br>
       <input type="text" id="razon" name="razon">
     </div>
     <div class="campo">
-      <label for="nit">CC/NIT:</label><br>
+      <label for="nit">NIT:</label><br>
       <input type="text" id="nit" name="nit">
     </div>
   </div>
@@ -69,7 +71,26 @@
     </div>
   </div>
 
- 
+  <script>
+    function mostrarCampos() {
+      const tipo = document.getElementById("tipoPersona").value;
+      const natural = document.getElementById("camposNatural");
+      const juridica = document.getElementById("camposJuridica");
+      const comunes = document.getElementById("camposComunes");
+
+      natural.classList.add("oculto");
+      juridica.classList.add("oculto");
+      comunes.classList.add("oculto");
+
+      if (tipo === "natural") {
+        natural.classList.remove("oculto");
+        comunes.classList.remove("oculto");
+      } else if (tipo === "juridica") {
+        juridica.classList.remove("oculto");
+        comunes.classList.remove("oculto");
+      }
+    }
+  </script>
         </div>
 
         <h4 class="mt-6 font-semibold">Parte(s) convocada(s):</h4>

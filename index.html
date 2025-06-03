@@ -71,26 +71,7 @@
     </div>
   </div>
 
-  <script>
-    function mostrarCampos() {
-      const tipo = document.getElementById("tipoPersona").value;
-      const natural = document.getElementById("camposNatural");
-      const juridica = document.getElementById("camposJuridica");
-      const comunes = document.getElementById("camposComunes");
-
-      natural.classList.add("oculto");
-      juridica.classList.add("oculto");
-      comunes.classList.add("oculto");
-
-      if (tipo === "natural") {
-        natural.classList.remove("oculto");
-        comunes.classList.remove("oculto");
-      } else if (tipo === "juridica") {
-        juridica.classList.remove("oculto");
-        comunes.classList.remove("oculto");
-      }
-    }
-  </script>
+ 
         </div>
 
         <h4 class="mt-6 font-semibold">Parte(s) convocada(s):</h4>

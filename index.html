@@ -38,6 +38,12 @@
     <!-- Apoderado -->
         <h4 class="mt-6 font-semibold">Apoderado:</h4>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+          <label>Tipo de persona:</label><br>
+            <select id="tipoPersona" onchange="mostrarCampos()">
+                <option value="">--Seleccione--</option>
+                <option value="natural">Persona Natural</option>
+                <option value="juridica">Persona Jurídica</option>
+            </select>
           <input type="text" placeholder="Identificacion" class="input">
           <input type="text" placeholder="Tarjeta Profesional" class="input">
           <input type="email" placeholder="Correo Electronico" class="input">

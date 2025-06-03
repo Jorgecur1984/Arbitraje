@@ -37,13 +37,11 @@
         </div>
     <!-- Apoderado -->
         <h4 class="mt-6 font-semibold">Apoderado:</h4>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
-          <label>Tipo de persona:</label><br>
-            <select id="tipoPersona" onchange="mostrarCampos()">
-                <option value="">--Seleccione--</option>
-                <option value="natural">Persona Natural</option>
-                <option value="juridica">Persona Jurídica</option>
-            </select>
+        <select id="tipo-representacion" name="tipo-representacion" class="input">
+                        <option value="">Tipo de representacion</option>
+                        <option value="opcion1">Persona Natural</option>
+                        <option value="opcion2">Persona Juridica</option>
+                </select>
          <div id="camposJuridica" class="oculto">
     <div class="campo">
       <label for="razon">Nombre/Razón Social:</label><br>

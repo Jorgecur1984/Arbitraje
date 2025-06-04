@@ -43,17 +43,8 @@
             <option value="opcion1">Persona Natural</option>
             <option value="opcion2">Persona Juridica</option>
           </select>
-         <div>
-          <div>
-            <label for="razon">Nombre o Razón Social:</label><br>
-                <input type="text" id="razon" name="razon">
-          </div>
-          <div>
-              <label for="nit">CC/NIT:</label><br>
-              <input type="text" id="nit" name="nit">
-            </div>
-        </div>
-
+           <input type="text" placeholder="Nombre/Razon Social" class="input" required>
+           <input type="text" placeholder="CC/NIT" class="input" required>
         </div>
 
         <h4 class="mt-6 font-semibold">Parte(s) convocada(s):</h4>
@@ -148,5 +139,7 @@
   <style>
     .input {
       @apply w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400;
+    }
+  </style>
     }
   </style>

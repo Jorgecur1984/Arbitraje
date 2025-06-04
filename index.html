@@ -27,69 +27,33 @@
           <input type="text" placeholder="Tipo de identificación" class="input">
           <input type="text" placeholder="Número de identificación" class="input">
           <input type="text" placeholder="Representante legal (si aplica)" class="input">
-                <select id="tipo-representacion" name="tipo-representacion" class="input">
-                        <option value="">Tipo de representacion</option>
-                        <option value="opcion1">Persona Natural</option>
-                        <option value="opcion2">Persona Juridica</option>
-                </select>
+          <select id="tipo-representacion" name="tipo-representacion" class="input">
+            <option value="">Tipo de representacion</option>
+            <option value="opcion1">Persona Natural</option>
+            <option value="opcion2">Persona Juridica</option>
+          </select>
           <input type="email" placeholder="Correo electrónico de notificacion judicial" class="input">
           <input type="tel" placeholder="Teléfono de contacto" class="input">
         </div>
     <!-- Apoderado -->
         <h4 class="mt-6 font-semibold">Apoderado:</h4>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
-            <select>
-                <option value="">Tipo de Persona</option>
-                <option value="natural">Persona Natural</option>
-                <option value="juridica">Persona Jurídica</option>
-            </select>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <select id="tipo-representacion" name="tipo-representacion" class="input">
+            <option value="">Tipo de Persona</option>
+            <option value="opcion1">Persona Natural</option>
+            <option value="opcion2">Persona Juridica</option>
+          </select>
          <div>
-    <div>
-      <label for="razon">Nombre o Razón Social:</label><br>
-      <input type="text" id="razon" name="razon">
-    </div>
-    <div>
-      <label for="nit">CC/NIT:</label><br>
-      <input type="text" id="nit" name="nit">
-    </div>
-  </div>
+          <div>
+            <label for="razon">Nombre o Razón Social:</label><br>
+                <input type="text" id="razon" name="razon">
+          </div>
+          <div>
+              <label for="nit">CC/NIT:</label><br>
+              <input type="text" id="nit" name="nit">
+            </div>
+        </div>
 
-  <!-- Campos comunes -->
-  <div id="camposComunes" class="oculto">
-    <div class="campo">
-      <label for="direccion">Dirección:</label><br>
-      <input type="text" id="direccion" name="direccion">
-    </div>
-    <div class="campo">
-      <label for="telefono">Teléfono:</label><br>
-      <input type="text" id="telefono" name="telefono">
-    </div>
-    <div class="campo">
-      <label for="email">Correo electrónico:</label><br>
-      <input type="email" id="email" name="email">
-    </div>
-  </div>
-
-  <script>
-    function mostrarCampos() {
-      const tipo = document.getElementById("tipoPersona").value;
-      const natural = document.getElementById("camposNatural");
-      const juridica = document.getElementById("camposJuridica");
-      const comunes = document.getElementById("camposComunes");
-
-      natural.classList.add("oculto");
-      juridica.classList.add("oculto");
-      comunes.classList.add("oculto");
-
-      if (tipo === "natural") {
-        natural.classList.remove("oculto");
-        comunes.classList.remove("oculto");
-      } else if (tipo === "juridica") {
-        juridica.classList.remove("oculto");
-        comunes.classList.remove("oculto");
-      }
-    }
-  </script>
         </div>
 
         <h4 class="mt-6 font-semibold">Parte(s) convocada(s):</h4>

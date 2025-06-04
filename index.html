@@ -38,19 +38,18 @@
     <!-- Apoderado -->
         <h4 class="mt-6 font-semibold">Apoderado:</h4>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
-          <label>Tipo de persona:</label><br>
-            <select id="tipoPersona" onchange="mostrarCampos()">
-                <option value="">--Seleccione--</option>
+            <select>
+                <option value="">Tipo de Persona</option>
                 <option value="natural">Persona Natural</option>
                 <option value="juridica">Persona Jurídica</option>
             </select>
-         <div id="camposJuridica" class="oculto">
-    <div class="campo">
-      <label for="razon">Razón Social:</label><br>
+         <div>
+    <div>
+      <label for="razon">Nombre o Razón Social:</label><br>
       <input type="text" id="razon" name="razon">
     </div>
-    <div class="campo">
-      <label for="nit">NIT:</label><br>
+    <div>
+      <label for="nit">CC/NIT:</label><br>
       <input type="text" id="nit" name="nit">
     </div>
   </div>
@@ -187,5 +186,3 @@
       @apply w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400;
     }
   </style>
-</body>
-</html>

@@ -22,6 +22,11 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <select id="tipo-representacion" name="tipo-representacion" class="input">
+            <option value="">Tipo de Persona</option>
+            <option value="opcion1">Persona Natural</option>
+            <option value="opcion2">Persona Juridica</option>
+          </select>
           <input type="text" placeholder="Parte convocante" class="input" required>
           <input type="text" placeholder="Nombre / Razón Social" class="input" required>
           <input type="text" placeholder="Tipo de identificación" class="input">
@@ -52,6 +57,11 @@
 
         <h4 class="mt-6 font-semibold">Parte(s) convocada(s):</h4>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+          <select id="tipo-representacion" name="tipo de Persona" class="input">
+            <option value="">Tipo de representacion</option>
+            <option value="opcion1">Persona Natural</option>
+            <option value="opcion2">Persona Juridica</option>
+          </select>
           <input type="text" placeholder="Nombre / Razón Social" class="input">
           <input type="text" placeholder="Tipo de identificación" class="input">
           <input type="text" placeholder="Número de identificación" class="input">
@@ -65,7 +75,7 @@
       <section>
         <h3 class="text-xl font-semibold mb-4">2. Cuantía total de la demanda</h3>
         <input type="text" placeholder="Pretensiones" class="input mb-2">
-        <input type="text" placeholder="Monto estimado del litigio" class="input">
+        <input type="text" placeholder="Cuantia total de la demanda" class="input">
 
         <label class="block mb-2 font-medium">Tipo de controversia:</label>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -82,9 +92,6 @@
       <section>
         <h3 class="text-xl font-semibold mb-4">3. Pacto Arbitral</h3>
         <label class="block mb-2">Agregue el texto de la clausula compromisoria o del compromiso</label>
-        <label><input type="radio" name="clausula" value="Sí" class="mr-1"> Sí</label>
-        <label class="ml-4"><input type="radio" name="clausula" value="No" class="mr-1"> No</label>
-
         <textarea placeholder="Texto del pacto arbitral" class="input h-32 mt-4"></textarea>
         <label class="block mt-4 mb-2">Adjunte el documento que contiene el pacto arbitral</label>
         <input type="file" accept=".pdf" class="input">
@@ -102,6 +109,7 @@
 
       <!-- 5. Demanda y Anexos -->
       <section>
+         <label class="block mb-2">Los documentos que se aporten deben ser legibles y estar en un formato que permita su visualización</label>
         <h3 class="text-xl font-semibold mb-4">5. Demanda y Anexos</h3>
         <input type="file" name="demanda" accept=".pdf" class="input mb-2">
         <input type="file" name="poder" accept=".pdf" class="input mb-2">
@@ -109,8 +117,9 @@
         <input type="file" name="pruebas" accept=".pdf" class="input mb-2">
         <input type="file" name="comprobante" accept=".pdf" class="input mb-2">
         <input type="file" name="otros" class="input"> <br>
+        <label class="block mb-2">Agregar documento por un enlace</label>
         <input type="text" id="enlace" placeholder="Pega aquí el enlace del documento">
-       <button type="button" class="bg-gray-100 text-gray-800 border border-gray-300 px-3 py-1.5 rounded shadow-sm hover:bg-gray-200">Agregar Documento</button>
+       <button type="button" class="bg-gray-100 text-gray-800 border border-gray-300 px-3 py-1.5 rounded shadow-sm hover:bg-gray-200">Agregar enlace</button>
       </section>
 
       <!-- 6. Observaciones -->
